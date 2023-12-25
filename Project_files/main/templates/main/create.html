@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+</head>
+<body>
+    <header>
+       <ul class="menu_header">
+            <li><a href="{% url 'homeShop1' %}">Головна</a></li>
+            <li><a href="{% url 'create' %}">Додати статтю</a></li>
+            {% if user.is_authenticated %}
+                <form class="manu_ad_stat" method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button class="logout_button" type="submit">Вийти</button>
+                </form>
+            {% else %}
+                <li><a href="{% url 'signup' %}">Зареєструватися</a></li>
+                <li><a href="{% url 'signin' %}">Увійти</a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    {% block content %}
+    {% if user.is_authenticated %}
+    <main>
+      <div class="recl">
+        <p>Тут може бути ваша реклама</p>
+        <p>Тут може бути ваша реклама</p>
+      </div>
+
+      <div class="container">
+        <div class="title_text">Додайте статтю на будь-яку тему:</div>
+
+        <form class="create_and_send_stat" method="post">
+          {% csrf_token %}
+          {{ form.title }}
+          {{ form.anons }}
+          {{ form.full_text }}
+          <div class="button">
+            <button class="public" type="submit">Публікація</button><br>
+          </div>
+          <span>{{ error }}</span>
+        </form>
+      </div>
+
+      <div class="recl">
+        <p>Тут може бути ваша реклама</p>
+        <p>Тут може бути ваша реклама</p>
+      </div>
+    </main>
+    {% else %}
+    <main class="error_create">
+        <h2>Спочатку потрібно увійти!!</h2>
+    </main>
+    {% endif %}
+    {% endblock content %}
+
+</body>
+</html>
+
+
+<!--    <img src="{% static 'main/images/download.jpg' %}" alt="My image">-->

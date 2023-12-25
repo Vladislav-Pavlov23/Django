@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+</head>
+<body>
+    <header>
+       <ul class="menu_header">
+            <li><a href="{% url 'homeShop1' %}">Головна</a></li>
+            <li><a href="{% url 'create' %}">Додати статтю</a></li>
+            {% if user.is_authenticated %}
+                <form class="manu_ad_stat" method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button class="logout_button" type="submit">Вийти</button>
+                </form>
+            {% else %}
+                <li><a href="{% url 'signup' %}">Зареєструватися</a></li>
+                <li><a href="{% url 'signin' %}">Увійти</a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    {% block content %}
+    <main>
+      <div class="recl">
+        <p>Тут може бути ваша реклама</p>
+        <p>Тут може бути ваша реклама</p>
+      </div>
+
+      <div class="container">
+        <div class="title_text">Найсвіжіші статті</div>
+
+          {% if news %}
+            {% for el in news %}
+              <div class="stats">
+                <div class="title_stst"><span>Назва:</span> {{ el.title }}</div>
+                <div class="anons_stst"><span>Анонс</span>: {{ el.anons }}</div>
+                <div class="text_stst"><span>Читати повністю:</span><br> {{ el.full_text }}</div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p>Статей не знайдено...</p>
+          {% endif %}
+      </div>
+
+      <div class="recl">
+        <p>Тут може бути ваша реклама</p>
+        <p>Тут може бути ваша реклама</p>
+      </div>
+    </main>
+    {% endblock content %}
+
+</body>
+</html>
+
+
+<!--    <img src="{% static 'main/images/download.jpg' %}" alt="My image">-->

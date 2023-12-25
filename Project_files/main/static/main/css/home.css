@@ -1,0 +1,172 @@
+body{
+    color: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+header{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header li{
+    list-style-type: none;
+}
+header a{
+    color: #b4b4b4;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: system-ui;
+}
+.header_container{
+    display: flex;
+    align-items: center;
+}
+.menu_header{
+    display: flex;
+    gap: 2em;
+}
+.menu_header li{
+    padding: 0px 15px 0px 0px;
+}
+.menu_header a:hover{
+    transition: 0.3s;
+    color: beige;
+}
+
+
+
+
+main{
+    width: 100%;
+    height: 700px;
+    /* background-color: aquamarine; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5em;
+}
+.container{
+    width: 1000px;
+    color: black;
+    font-size: 14px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+.recl{
+    color: black;
+    font-size: 16px;
+    writing-mode: vertical-rl;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.title_text{
+    margin: 20px 0px 0px 0px;
+    padding: 5px 0px 5px 5px;
+    font-size: 19px;
+    background-color: #b4b4b44a;
+}
+.stats{
+    /* background-color: yellow; */
+    margin: 50px 0px 0px 0px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+.manu_ad_stat{
+    display: grid;
+    grid-gap: 3em;
+    margin: 30px 0px 0px 0px;
+    display: contents;
+}
+textarea{
+    resize: none;
+}
+.title_stst span{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 10px 0px 0px;
+}
+.anons_stst span{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 10px 0px 0px;
+}
+.text_stst span{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 10px 0px 0px;
+}
+.title_stst{
+    margin: 0px 0px 8px 0px;
+}
+.anons_stst{
+    margin: 0px 0px 8px 0px;
+}
+
+input{
+    height: 25px;
+    font-size: 12px;
+}
+textarea{
+    height: 300px;
+    font-size: 12px;
+}
+
+.button{
+    display: flex;
+    justify-content: end;
+}
+
+.public{
+    height: 30px;
+    width: 150px;
+    background: #bdb76bc4;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.public:hover{
+    background: #bdb76ba8;
+    transition: .3s;
+}
+.logout_button{
+    height: 28px;
+    width: 74px;
+    background: #acacacc4;
+    border: 1px solid black;
+    cursor: pointer;
+}
+logout_button:hover{
+    background: #939393c4;
+    transition: .3s;
+    color: red;
+}
+
+.create_and_send_stat{
+    display: grid;
+    grid-gap: 2em;
+    margin: 40px 0px 0px 0px;
+}
+
+.error_create{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 15px;
+}
+
+
+
+
+

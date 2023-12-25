@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'main/css/sighin.css' %}">
+</head>
+<body>
+    <main class="Signin_main">
+        <h2>Sign in</h2>
+        <form class="we" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="button_signin" type="submit">Sign in</button>
+        </form>
+    </main>
+</body>
+</html>

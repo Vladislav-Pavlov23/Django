@@ -1,0 +1,35 @@
+body{
+    color: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.Signin_main{
+    display: grid;
+    height: 215px;
+    justify-items: center;
+    align-items: center;
+    margin: 150px 0px 0px 0px;
+    color: black;
+}
+
+label{
+    margin: 0px 20px 0px 0px
+}
+input{
+    height: 22px;
+}
+.button_signin{
+   height: 30px;
+    width: 114px;
+    background: #329c25c4;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+.button_signin:hover{
+    background: #3bb92cc4;
+    transition: .3s;
+    color: black;
+}

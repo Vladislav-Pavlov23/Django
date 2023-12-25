@@ -1,0 +1,2 @@
+Username: Виктор, Email: wwwtyrt22@gmail.com, Password: pbkdf2_sha256$720000$7RUX5nrVgr8DyxqkERsGzg$4xHRax8xZDkmkPkWJMyUfEgLdslu93/FBOPeASkj4p4=
+Username: Dmitro, Email: DmitroOnedamn@gmail.com, Password: pbkdf2_sha256$720000$z2BIrZsmv8FOBBJN1VhtPT$iJGraNdNPVDkn3Hoz6pAlyQgXVdsZKHt8Edi7FRcNNI=

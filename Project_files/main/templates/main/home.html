@@ -1,0 +1,55 @@
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Главная страница</title>-->
+<!--    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <header>-->
+<!--        <div class="header_container">-->
+<!--          <ul>-->
+<!--            <li><a href="{% url 'homeShop1' %}">Головна</a></li>-->
+<!--            <li><a href="{% url 'about' %}">About</a></li>-->
+<!--            <li><a href="{% url 'info' %}">info</a></li>-->
+<!--            <li><a href="{% url 'create' %}">Додати статтю</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--    </header>-->
+
+<!--    {% block content %}-->
+<!--    <main>-->
+<!--      <div class="recl">-->
+<!--        <p>Тут може бути ваша реклама</p>-->
+<!--        <p>Тут може бути ваша реклама</p>-->
+<!--      </div>-->
+
+<!--      <div class="container">-->
+<!--        <div class="title_text">Найсвіжіші статті</div>-->
+
+<!--          {% if news %}-->
+<!--            {% for el in news %}-->
+<!--              <div class="stats">-->
+<!--                <div>title: {{ el.title }}</div>-->
+<!--                <p>Anons: {{ el.anons }}</p>-->
+<!--                <p>Anons: {{ el.full_text }}</p>-->
+<!--              </div>-->
+<!--            {% endfor %}-->
+<!--          {% else %}-->
+<!--            <p>У вас нет записей</p>-->
+<!--          {% endif %}-->
+<!--      </div>-->
+
+<!--      <div class="recl">-->
+<!--        <p>Тут може бути ваша реклама</p>-->
+<!--        <p>Тут може бути ваша реклама</p>-->
+<!--      </div>-->
+<!--    </main>-->
+<!--    {% endblock content %}-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--&lt;!&ndash;    <img src="{% static 'main/images/download.jpg' %}" alt="My image">&ndash;&gt;-->
